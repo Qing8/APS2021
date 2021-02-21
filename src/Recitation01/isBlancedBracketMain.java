@@ -1,4 +1,4 @@
-package Recition01;
+package Recitation01;
 
 import java.io.BufferedReader;
 import java.io.IOException;
