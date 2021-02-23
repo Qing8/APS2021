@@ -9,23 +9,24 @@ class Solution {
     private String ans;
     public static void main(String[] args){
         Solution s = new Solution();
-        s.getHappyString(3,1);
+        s.getHappyString(1,3);
     }
 
     public String getHappyString(int n, int k) {
-        helper(k, -1, "", "abc", n);
+        int[] left = {k};
+        helper(left, -1, "", "abc", n);
         System.out.println(ans);
         return ans;
     }
 
-    public String helper(int left, int lastindex, String curString, String string, int targetlength){
+    public String helper(int[] left, int lastindex, String curString, String string, int targetlength){
         if (curString.length() == targetlength){
-            left--;
-        }
-
-        if (left == 0){
-            ans = curString;
-            return curString;
+            left[0]--;
+            if (left[0] == 0){
+                ans = curString;
+                return curString;
+            }
+            return "";
         }
 
         for (int i=0; i<string.length(); i++){
