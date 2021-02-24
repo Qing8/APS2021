@@ -17,11 +17,19 @@ public class Main {
         String inputString;
         int curTime = 0;
         boolean atLeft = true;
+        int totalOnboard = 0;
+
+        List<Integer> leftBoats = new ArrayList<>();
+        List<Integer> rightBoats = new ArrayList<>();
 
         while ((inputString = bf.readLine()) != null){
             String[] parsed = inputString.split(" ");
-
+            if (parsed[1].equals("left")){
+                leftBoats.add(Integer.parseInt(parsed[0]));
+            }else rightBoats.add(Integer.parseInt(parsed[0]));
         }
+
+        while (totalOnboard )
     }
 
 }
